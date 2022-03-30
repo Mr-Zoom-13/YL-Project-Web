@@ -1,5 +1,4 @@
 from flask import Flask, request
-import logging
 import json
 from data import db_session
 from data.users import Users
@@ -9,6 +8,7 @@ from data.cargo_categories import Categories
 from data.documentation import documentation
 import datetime
 from requests import get
+import os
 
 app = Flask(__name__)
 sessionStorage = {}
@@ -515,4 +515,5 @@ def create_statistics(req, res, yandex_id, new):
 if __name__ == '__main__':
     db_session.global_init('db/home_accountant.db')
     db_ses = db_session.create_session()
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
