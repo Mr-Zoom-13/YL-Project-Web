@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика</title>
+</head>
+<body>
+    <center>
+        {% if date %}
+            <h1>Дата создания статистики: {{ date }}</h1>
+            <img src="../static/img/1.png" alt="статистика">
+        {% else %}
+            <h1>Информация отсутствует :(</h1>
+        {% endif %}
+    </center>
+</body>
+</html>
