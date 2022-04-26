@@ -805,7 +805,7 @@ def create_statistics(req, res, yandex_id, new):
                                                             [values_prov, labels_prov],
                                                             datetime.date.today()]}
                 link_buttons = [{'title': 'Посмотреть диаграммы', 'hide': True,
-                                 "url": "https://50f9-94-41-167-123.ngrok.io/stats/" + yandex_id},
+                                 "url": "https://mynew-app1.herokuapp.com/stats/" + yandex_id},
                                 {'title': 'Меню трат', 'hide': False}]
                 res['response']['buttons'] = link_buttons
             else:
